@@ -44,6 +44,13 @@ public class AccountBean implements Serializable {
 
 		return "success";
 	}
+	
+	public String edit() {
+		int id = 1;
+		user = userService.getById(id);
+		
+		return "account";
+	}
 
 	public UserService getUserService() {
 		return userService;

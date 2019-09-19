@@ -30,6 +30,10 @@ public class UserService {
 		System.out.println("service");
 		return userRepository.findAll();
 	}
+	
+	public User getById(int id) {
+		return userRepository.find(id);
+	}
 
 	public UserRepository getUserRepository() {
 		return userRepository;

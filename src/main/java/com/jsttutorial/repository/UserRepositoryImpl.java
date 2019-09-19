@@ -11,6 +11,7 @@ import javax.faces.bean.RequestScoped;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import javax.persistence.Query;
+import javax.persistence.criteria.CriteriaQuery;
 
 import com.jsttutorial.domain.User;
 import com.jsttutorial.domain.UserRepository;
@@ -36,6 +37,15 @@ public class UserRepositoryImpl implements UserRepository , Serializable {
 
 		return list;
 	}
+	
+
+	@Override
+	public User find(int id) {
+		Query query = entityManager.createQuery("select from users", User.class);		
+		
+		return (User)query.getSingleResult();
+	}
+	
 
 	@Override
 	public void save(User user) {
@@ -50,5 +60,6 @@ public class UserRepositoryImpl implements UserRepository , Serializable {
 	public void setEntityManager(EntityManager entityManager) {
 		this.entityManager = entityManager;
 	}
+
 
 }
