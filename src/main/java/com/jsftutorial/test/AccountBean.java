@@ -8,8 +8,8 @@ import javax.faces.bean.RequestScoped;
 import javax.faces.bean.SessionScoped;
 import javax.inject.Inject;
 
-import com.jsttutorial.domain.User;
-import com.jsttutorial.service.UserService;
+import com.jsftutorial.domain.User;
+import com.jsftutorial.service.UserService;
 
 @ManagedBean
 @SessionScoped

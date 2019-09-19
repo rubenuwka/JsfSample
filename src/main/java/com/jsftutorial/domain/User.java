@@ -1,4 +1,4 @@
-package com.jsttutorial.domain;
+package com.jsftutorial.domain;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;

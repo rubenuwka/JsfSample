@@ -1,4 +1,4 @@
-package com.jsttutorial.repository;
+package com.jsftutorial.repository;
 
 import java.io.Serializable;
 import java.util.ArrayList;
@@ -13,11 +13,11 @@ import javax.persistence.PersistenceContext;
 import javax.persistence.Query;
 import javax.persistence.criteria.CriteriaQuery;
 
-import com.jsttutorial.domain.User;
-import com.jsttutorial.domain.UserRepository;
+import com.jsftutorial.domain.User;
+import com.jsftutorial.domain.UserRepository;
 
 @ManagedBean
-@Remote (com.jsttutorial.domain.UserRepository.class)
+@Remote (com.jsftutorial.domain.UserRepository.class)
 @Stateless
 @RequestScoped
 public class UserRepositoryImpl implements UserRepository , Serializable {

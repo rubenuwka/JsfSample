@@ -1,4 +1,4 @@
-package com.jsttutorial.service;
+package com.jsftutorial.service;
 
 import java.util.List;
 
@@ -10,8 +10,8 @@ import javax.faces.bean.SessionScoped;
 import javax.inject.Inject;
 import javax.inject.Named;
 
-import com.jsttutorial.domain.User;
-import com.jsttutorial.domain.UserRepository;
+import com.jsftutorial.domain.User;
+import com.jsftutorial.domain.UserRepository;
 
 @Named
 //@Stateless
