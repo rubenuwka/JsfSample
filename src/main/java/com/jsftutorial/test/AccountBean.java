@@ -38,7 +38,6 @@ public class AccountBean implements Serializable {
 	}
 
 	public String create() {
-		System.out.println("get users");
 		for(User user : userService.getAll()) {
 			System.out.println(user.getNames());
 		}
