@@ -12,4 +12,6 @@ public interface UserRepository {
 	public List<User> findAll();
 	
 	public User find(int id);
+	
+	public void delete(int id);
 }

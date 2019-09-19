@@ -52,6 +52,13 @@ public class UserRepositoryImpl implements UserRepository , Serializable {
 		// TODO Auto-generated method stub
 
 	}
+	
+	public void delete(int id) {
+		Query query = entityManager.createQuery("delete from users where id = :id");
+		query.setParameter("id", id);
+		
+		query.executeUpdate();
+	}
 
 	public EntityManager getEntityManager() {
 		return entityManager;
