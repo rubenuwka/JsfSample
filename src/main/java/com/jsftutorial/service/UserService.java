@@ -2,11 +2,7 @@ package com.jsftutorial.service;
 
 import java.util.List;
 
-import javax.ejb.Stateless;
-import javax.faces.bean.ManagedBean;
-import javax.faces.bean.ManagedProperty;
-import javax.faces.bean.RequestScoped;
-import javax.faces.bean.SessionScoped;
+import javax.enterprise.context.RequestScoped;
 import javax.inject.Inject;
 import javax.inject.Named;
 
@@ -14,7 +10,6 @@ import com.jsftutorial.domain.User;
 import com.jsftutorial.domain.UserRepository;
 
 @Named
-//@Stateless
 @RequestScoped
 public class UserService {
 	

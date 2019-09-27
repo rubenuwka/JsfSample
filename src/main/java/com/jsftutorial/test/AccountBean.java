@@ -2,35 +2,43 @@ package com.jsftutorial.test;
 
 import java.io.Serializable;
 
+
 import javax.annotation.PostConstruct;
-import javax.faces.bean.ManagedBean;
-import javax.faces.bean.RequestScoped;
-import javax.faces.bean.SessionScoped;
+import javax.enterprise.context.RequestScoped;
+
 import javax.inject.Inject;
+import javax.inject.Named;
 
 import com.jsftutorial.domain.User;
 import com.jsftutorial.service.UserService;
 
-@ManagedBean
-@SessionScoped
 @RequestScoped
+@Named
 public class AccountBean implements Serializable {
 
+	private static final long serialVersionUID = 1L;
+ 
+	@Inject
 	private User user;
 
-	//@ManagedProperty(value="#{userService}")
 	@Inject
 	private UserService userService;
-
-	public User getUser() {
-		return user;
-	}
 	
 	@PostConstruct
 	public void init() {
-		System.out.println("init accountbean");
+		System.out.println("init account bean");
 		user = new User();
+		user.setNames("scot");
+		user.setSurnames("tiger");
+		user.setAddress("av. benavides");
+		user.setPhoneNumber("9834567891");
+		user.setUsername("scott");
+		
 		System.out.println(getUserService());
+	}	
+	
+	public User getUser() {
+		return user;
 	}
 
 	public void setUser(User user) {

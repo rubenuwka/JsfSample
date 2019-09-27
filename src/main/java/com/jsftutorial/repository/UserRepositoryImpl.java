@@ -4,24 +4,24 @@ import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
-import javax.ejb.Remote;
-import javax.ejb.Stateless;
-import javax.faces.bean.ManagedBean;
-import javax.faces.bean.RequestScoped;
+import javax.enterprise.context.RequestScoped;
+import javax.inject.Named;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import javax.persistence.Query;
-import javax.persistence.criteria.CriteriaQuery;
 
 import com.jsftutorial.domain.User;
 import com.jsftutorial.domain.UserRepository;
 
-@ManagedBean
-@Remote (com.jsftutorial.domain.UserRepository.class)
-@Stateless
+@Named
 @RequestScoped
 public class UserRepositoryImpl implements UserRepository , Serializable {
 
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	
 	@PersistenceContext(unitName="ShoppingCart")
 	private EntityManager entityManager;
 

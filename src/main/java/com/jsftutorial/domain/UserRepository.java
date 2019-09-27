@@ -1,4 +1,4 @@
-package com.jsftutorial.domain;
+ package com.jsftutorial.domain;
 
 import java.util.List;
 

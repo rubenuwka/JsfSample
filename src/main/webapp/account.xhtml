@@ -1,9 +1,10 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml"
-	  xmlns:f="http://java.sun.com/jsf/core"
-	  xmlns:h="http://java.sun.com/jsf/html">
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:b="http://bootsfaces.net/ui"
+      >
  
 <h:head>
 <title>CREATE ACCOUNT</title>
@@ -12,29 +13,42 @@
 <h3>CREATE ACCOUNT</h3>
 <h:form>
  <h:panelGrid columns="3">
-	<h:outputLabel value="Nombres:" />
-	<h:inputText id="names" value="#{accountBean.user.names}"></h:inputText>
-	<h:message for="names" style="color:red" />
-	
+    <h:outputText value="User:"/>
+    <b:inputText value="#{accountBean.user.names}">
+     <f:facet name="prepend"><b:icon name="user" /></f:facet>
+	 <h:message for="names" style="color:red" />     
+    </b:inputText>
+ 
 	<h:outputLabel value="Apellidos:" />
-	<h:inputText id="surnames" value="#{accountBean.user.surnames}"></h:inputText>
-	<h:message for="surnames" style="color:red" />
-	
+    <b:inputText value="#{accountBean.user.surnames}">
+     <f:facet name="prepend"><b:icon name="user" /></f:facet>
+	 <h:message for="surnames" style="color:red" />     
+    </b:inputText>
+    
 	<h:outputLabel value="Direccion:" />
-	<h:inputText id="address" value="#{accountBean.user.address}"></h:inputText>
-	<h:message for="address" style="color:red" />
+    <b:inputText value="#{accountBean.user.address}">
+     <f:facet name="prepend"><b:icon name="user" /></f:facet>
+	 <h:message for="address" style="color:red" />     
+    </b:inputText>    
 	
 	<h:outputLabel value="Celular:" />
-	<h:inputText id="phoneNumber"  value="#{accountBean.user.phoneNumber}"></h:inputText>
-	<h:message for="phoneNumber" style="color:red" />
-	
+    <b:inputText value="#{accountBean.user.phoneNumber}">
+     <f:facet name="prepend"><b:icon name="user" /></f:facet>
+	 <h:message for="phoneNumber" style="color:red" />     
+    </b:inputText>    
+		
 	<h:outputLabel value="Username:" />
-	<h:inputText id="username" value="#{accountBean.user.username}"></h:inputText>
-	<h:message  for="username" style="color:red" />
-	
+    <b:inputText value="#{accountBean.user.username}">
+     <f:facet name="prepend"><b:icon name="user" /></f:facet>
+	 <h:message for="username" style="color:red" />     
+    </b:inputText>   	
+
 	<h:outputLabel value="Password:" />
-	<h:inputSecret id="password" value="#{accountBean.user.password}"></h:inputSecret>
-	<h:message for="password" style="color:red" />
+    <b:inputSecret value="#{accountBean.user.password}">
+     <f:facet name="prepend"><b:icon name="password" /></f:facet>
+	 <h:message for="password" style="color:red" />     
+    </b:inputSecret>  
+
 </h:panelGrid>
 <h:commandButton value="Login" action="#{accountBean.create}"></h:commandButton>
 </h:form>
